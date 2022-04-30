@@ -4,9 +4,9 @@ PIP		= $(VENV)/bin/pip
 
 # Variables used to configure
 IMAGE_REGISTRY	?= ghcr.io
-IMAGE_REPO		= keepcodingclouddevops5
-IMAGE_NAME		?= keepcoding-devops-liberando-productos-practica-final
-VERSION			?= develop
+IMAGE_REPO		= fblancot86
+IMAGE_NAME		?= simple-server
+VERSION			?= 0.0.1
 
 # Variables used to configure docker images registries to build and push
 IMAGE			= $(IMAGE_REGISTRY)/$(IMAGE_REPO)/$(IMAGE_NAME):$(VERSION)

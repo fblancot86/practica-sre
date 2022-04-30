@@ -1,0 +1,63 @@
+# Default values for simple-server.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: fblanco86/simple-server
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "0.0.1"
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations:
+  reloader.stakater.com/auto: "true"
+
+## -- Metrics configuration of the application to deploy
+metrics:
+  # -- Indicates whether this app will expose metrics
+  enabled: true
+  # -- Service configuration used for metrics
+  svc:
+    # -- Service port number used for metrics
+    port: 8000
+    # -- Service port name used for metrics
+    name: metrics
+
+# -- Service configuration
+service:
+  # -- Service Type
+  type: ClusterIP
+  # -- Service number for the webapp
+  port: 8081
+
+# -- Resources configuration for the deployment
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 60
+  targetMemoryUtilizationPercentage: 30
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
