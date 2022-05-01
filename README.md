@@ -24,9 +24,9 @@ Se han creado 2 Workflows, uno de Testing y otro de Release. En el apartado Acti
 
 https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/actions
 
-![Ejemplo Test](https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/test_ghactions)
+![Ejemplo Test](https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/test_ghactions.png)
 
-![Ejemplo Release](https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/release_ghactions)
+![Ejemplo Release](https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/release_ghactions.png)
 
 
 # Creación Cluster en Minikube
