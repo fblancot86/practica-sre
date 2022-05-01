@@ -15,7 +15,7 @@ kubectl
 
 Se ha creado el endpoint /bye, añadiendolo a los endpoints ya existentes.
 
-![Endpoints](https://https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/endpoints.png)
+![Endpoints](https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/endpoints.png)
 
 
 # Github Actions
@@ -24,9 +24,9 @@ Se han creado 2 Workflows, uno de Testing y otro de Release. En el apartado Acti
 
 https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/actions
 
-![Ejemplo Test](https://https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/test_ghactions)
+![Ejemplo Test](https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/test_ghactions)
 
-![Ejemplo Release](https://https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/release_ghactions)
+![Ejemplo Release](https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/release_ghactions)
 
 
 # Creación Cluster en Minikube
@@ -112,4 +112,4 @@ Por último ejecutamos la aplicación para que se dispares las alertas:
 ./extress -abuse-memory -escalate -max-duration 10000000
 ```
 
-![Alertas Slack](https://https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/alertas_slack)
+![Alertas Slack](https://github.com/KeepCodingCloudDevops5/liberando-productos-francesc/blob/main/ejemplos/alertas_slack.png)
