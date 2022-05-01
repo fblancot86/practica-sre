@@ -59,7 +59,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1651256938274,
+  "iteration": 1651432367463,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -477,7 +477,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": true,
-          "expr": "sum(container_memory_working_set_bytes {namespace=\"$namespace\", pod=\"$pod\"}) ",
+          "expr": "sum(container_memory_working_set_bytes {pod=\"$pod\"}) ",
           "interval": "",
           "legendFormat": "{{ pod }} memory usage",
           "refId": "A"
@@ -488,7 +488,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": true,
-          "expr": "sum(kube_pod_container_resource_requests{resource=\"memory\", namespace=\"$namespace\", pod=\"$pod\"}) ",
+          "expr": "sum(kube_pod_container_resource_requests{resource=\"memory\", pod=\"$pod\"}) ",
           "hide": false,
           "interval": "",
           "legendFormat": "{{pod }} memory requests",
