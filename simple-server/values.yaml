@@ -5,10 +5,23 @@
 replicaCount: 1
 
 image:
-  repository: fblanco86/simple-server
+  repository: ghcr.io/fblancot86/simple-server
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.1"
+  tag: "0.0.2"
+
+# imagePullSecrets created to use GitHub Private Account
+imagePullSecrets:
+  - name: dockerconfigjson-github-com
+
+# -- imageCredentials for GitHub private account
+imageCredentials:
+  ## -- GitHub registry URL
+  registry: "ghcr.io"
+  ## -- GitHub account's username
+  username: "fblancot86"
+  ## -- GitHub account's token (only read permissions)
+  password: "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"
 
 serviceAccount:
   # Specifies whether a service account should be created

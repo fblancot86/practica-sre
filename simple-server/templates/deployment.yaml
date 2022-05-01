@@ -20,11 +20,17 @@ spec:
       labels:
         {{- include "simple-server.selectorLabels" . | nindent 8 }}
     spec:
+      {{- if ((.Values.imageCredentials).password) -}}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- end }}
       serviceAccountName: {{ include "simple-server.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}       
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
